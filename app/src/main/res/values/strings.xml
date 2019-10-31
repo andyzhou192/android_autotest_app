@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">android_autotest_app</string>
+    <string name="test_run_btn_text">测试执行</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="run_btn">Excute All Tests</string>
+    <string name="notice_running">running......</string>
+
+    <string name="text01">测试颜色</string>
+</resources>

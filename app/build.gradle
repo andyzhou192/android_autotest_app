@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27 // 29
+    buildToolsVersion '27.0.0'  // 29.0.2
+    defaultConfig {
+        applicationId "com.cmcc.autotest"
+        minSdkVersion 14
+        targetSdkVersion 27  // 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'android.test.runner.AndroidTestRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'], excludes: ['android-support-v4.jar'])
+
+    implementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:design:27.0.0'
+    // 添加csv解析依赖包
+    implementation  'net.sourceforge.javacsv:javacsv:2.0'
+    // 添加fastjson依赖包
+    implementation  'com.alibaba:fastjson:1.2.6'
+}
